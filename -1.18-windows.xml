@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<VirtualBox xmlns="http://www.virtualbox.org/" version="1.18-windows">
+  <Machine uuid="{812f8e95-6f8b-d70c-1000-000000000000}" name="MuMuPlayer-15.0-0" OSType="Linux26_64" snapshotFolder="Snapshots" lastStateChange="2023-02-17T02:07:39Z">
+    <MediaRegistry>
+      <HardDisks>
+        <HardDisk uuid="{812f8e95-6f8b-d70c-0000-100000000000}" location="D:\Program Files\Netease\MuMu\\nx_device\15.0\vms\MuMuPlayer-15.0-base\system.vdi" format="VDI" type="Readonly"/>
+        <HardDisk uuid="{812f8e95-6f8b-d70c-0001-000000000000}" location="ota.vdi" format="VDI" type="Normal"/>
+        <HardDisk uuid="{812f8e95-6f8b-d70c-0002-000000000000}" location="data.vdi" format="VDI" type="Normal"/>
+      </HardDisks>
+    </MediaRegistry>
+    <ExtraData>
+      <ExtraDataItem name="VBoxInternal/Devices/VAddressDevice/0/Config/machine_name" value="MuMuPlayer-15.0-0"/>
+      <ExtraDataItem name="VBoxInternal/Devices/VAddressDevice/0/PCIDeviceNo" value="9"/>
+      <ExtraDataItem name="VBoxInternal/Devices/VAddressDevice/0/PCIFunctionNo" value="0"/>
+      <ExtraDataItem name="VBoxInternal/Devices/VAddressDevice/0/Trusted" value="1"/>
+      <ExtraDataItem name="VBoxInternal/PDM/Devices/VAddressDevice/Path" value="D:\Program Files\Netease\MuMu\nx_device\15.0\device\VaddressDevice.dll"/>
+      <ExtraDataItem name="VBoxInternal/Devices/VAddressDevice/0/Config/instance_name" value="ginstance1400936718454910700"/>
+      <ExtraDataItem name="VBoxInternal/MemoryShared" value="0"/>
+      <ExtraDataItem name="VBoxInternal/MemoryFreePFN" value="0"/>
+    </ExtraData>
+    <Hardware>
+      <CPU count="4">
+        <PAE enabled="true"/>
+        <SpecCtrl enabled="true"/>
+        <X2APIC enabled="true"/>
+        <LongMode enabled="true"/>
+        <HardwareVirtExLargePages enabled="true"/>
+        <L1DFlushOn scheduling="false"/>
+        <MDSClearOn scheduling="false"/>
+      </CPU>
+      <Memory RAMSize="4096"/>
+      <HID Pointing="USBTablet"/>
+      <Chipset type="ICH9"/>
+      <Display controller="None"/>
+      <Paravirt provider="KVM"/>
+      <Boot>
+        <Order position="1" device="HardDisk"/>
+        <Order position="2" device="None"/>
+        <Order position="3" device="None"/>
+        <Order position="4" device="None"/>
+      </Boot>
+      <BIOS>
+        <IOAPIC enabled="true"/>
+        <Logo fadeIn="false" fadeOut="false" displayTime="0"/>
+        <BootMenu mode="Disabled"/>
+      </BIOS>
+      <Network>
+        <Adapter slot="0" enabled="true" MACAddress="08D09C166344" type="virtio">
+          <DisabledModes>
+            <InternalNetwork name="intnet"/>
+            <HostOnlyInterface name="VirtualBox Host-Only Ethernet Adapter"/>
+            
+            <NATNetwork name="NatNetwork"/>
+            
+            <!--
+            <NAT>
+              <Alias proxy-only="true"/>
+              <Forwarding name="ADB_PORT_EX" proto="1" hostip="127.0.0.1" hostport="5555" guestport="5555"/>
+              <Forwarding name="ADB_PORT_OLD" proto="1" hostip="127.0.0.1" hostport="7555" guestport="5555"/>
+              <Forwarding name="ADB_PORT" proto="1" hostip="127.0.0.1" hostport="16384" guestport="5555"/>
+            </NAT>
+            -->
+          </DisabledModes>
+          
+          <NAT>
+            <Alias proxy-only="true"/>
+            <Forwarding name="ADB_PORT_EX" proto="1" hostip="127.0.0.1" hostport="5555" guestport="5555"/>
+            <Forwarding name="ADB_PORT_OLD" proto="1" hostip="127.0.0.1" hostport="7555" guestport="5555"/>
+            <Forwarding name="ADB_PORT" proto="1" hostip="127.0.0.1" hostport="16384" guestport="5555"/>
+          </NAT>
+          
+          <!--
+          <NATNetwork name="NatNetwork"/>
+          -->
+          
+        </Adapter>
+      </Network>
+      
+      <AudioAdapter driver="DirectSound" enabled="false" enabledIn="true" enabledOut="true"/>
+      <RTC localOrUTC="UTC"/>
+      <SharedFolders>
+        <SharedFolder name="MuMuShared" hostPath="C:\Users\16490\Documents\MuMu&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x5939;" writable="true" autoMount="true"/>
+        <SharedFolder name="keymap_config" hostPath="D:\Program Files\Netease\MuMu\nx_device\15.0\vms\MuMuPlayer-15.0-base\keymap_config" writable="true" autoMount="true"/>
+        <SharedFolder name="products" hostPath="D:\Program Files\Netease\MuMu\nx_device\15.0\vms\MuMuPlayer-15.0-base\products" writable="true" autoMount="true"/>
+        <SharedFolder name="install_apk" hostPath="D:\Program Files\Netease\MuMu\nx_device\15.0\vms\MuMuPlayer-15.0-base\install_apk" writable="true" autoMount="true"/>
+        <SharedFolder name="private_shared" hostPath="D:\Program Files\Netease\MuMu\vms\MuMuPlayer-15.0-0\private_shared" writable="true" autoMount="true"/>
+      </SharedFolders>
+      <GuestProperties>
+        <GuestProperty name="/VirtualBox/GuestAdd/VBoxService/--timesync-interval" value="10000" timestamp="1677030967219598800" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold" value="500" timestamp="1677030967645678800" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="C" timestamp="1469091104648558900" flags=""/>
+        <GuestProperty name="nemud.system_writable" value="0" timestamp="1676356303272261400" flags=""/>
+      </GuestProperties>
+      <StorageControllers>
+        <StorageController name="VirtIO" type="VirtioSCSI" PortCount="3" useHostIOCache="true" Bootable="true">
+          <AttachedDevice nonrotational="true" type="HardDisk" hotpluggable="false" port="0"  device="0">
+           <Image uuid="{812f8e95-6f8b-d70c-0000-100000000000}"/>
+          </AttachedDevice>
+          <AttachedDevice nonrotational="true" type="HardDisk" hotpluggable="false" port="1"  device="0">
+           <Image uuid="{812f8e95-6f8b-d70c-0001-000000000000}"/>
+          </AttachedDevice>
+          <AttachedDevice nonrotational="true" discard="true" type="HardDisk" hotpluggable="false" port="2"  device="0">
+           <Image uuid="{812f8e95-6f8b-d70c-0002-000000000000}"/>
+          </AttachedDevice>
+        </StorageController>
+      </StorageControllers>
+    </Hardware>
+  </Machine>
+</VirtualBox>
